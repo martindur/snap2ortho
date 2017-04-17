@@ -3,12 +3,12 @@ import math
 
 bl_info = {
     "name": "Snap2ortho",
-    "author": "dur",
-    "version": (0,1),
+    "author": "Dur",
+    "version": (1,0),
     "blender": (2,77,0),
     "location": "3d view",
     "description": "Align view with a specific angled view and press ALT+MMB to snap into ortho mode for that view",
-    #"warning": "Enable 'auto-perspective' in user preferences for the addon to even make sense"
+    "warning": "Enable 'auto-perspective' in user preferences for the addon to work as intended.",
     "category": "3D View",
 }
 
@@ -60,7 +60,7 @@ def register():
     bpy.utils.register_class(superAutoPerspective)
     #Handle keymapping
     wm = bpy.context.window_manager
-    km = wm.keyconfigs.addon.keymaps.new(name='Object Mode', space_type='EMPTY')
+    km = wm.keyconfigs.addon.keymaps.new(name='Window', space_type='EMPTY')
     kmi = km.keymap_items.new(superAutoPerspective.bl_idname, 'MIDDLEMOUSE', 'PRESS', alt=True)
     keymaps.append(km)
     
