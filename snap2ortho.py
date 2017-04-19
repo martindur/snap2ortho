@@ -3,7 +3,7 @@ import math
 
 bl_info = {
     "name": "Snap2ortho",
-    "author": "Dur",
+    "author": "Martin Durhuus",
     "version": (1,0),
     "blender": (2,77,0),
     "location": "3d view",
